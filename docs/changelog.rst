@@ -3,6 +3,11 @@ Changelog
 
 All help in providing PRs to close out bug issues is appreciated. Even if that is providing a repo that fully replicates issues. We have very generous contributors that have added these to bug issues which meant another contributor picked up the bug and closed it out.
 
+-  Unreleased
+    - New feature: server mode. Pass ``base_url`` to record and replay through a real local HTTP server
+      (``cassette.url``) instead of patching HTTP libraries. New options: ``base_url``, ``server_host``,
+      ``server_port``, ``verify_upstream_ssl`` and ``upstream_timeout``. See the "Server Mode" docs.
+
 -  8.2.1
     - SECURITY: Load cassettes with a safe YAML loader, preventing arbitrary code execution when a cassette from an untrusted source is loaded (GHSA-rpj2-4hq8-938g) - thanks @RamiAltai and @EQSTLab
     - Validate ``record_mode`` and raise a clear error on an invalid value (#208)
